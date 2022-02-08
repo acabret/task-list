@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+*{
+    font-family: 'Roboto', monospace;
+}
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    
+}
+
+.container{
+    max-width: 768px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.app{
+    margin-top: 2rem;
+    background-color: #fff;
+    width:100%;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.titulo-app{
+    text-align: center;
+    margin: 0;
+
+}
+
+.fila-input{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.fila-input .btn{
+    margin-left: .5rem;
+}
+
+.fila-input .textbox{
+    flex-grow: 1;
+}
+
+.textbox{
+    display: inline;
+    height: 2rem;
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.btn{
+    height: 2.5rem;
+    width: 8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.btn:active{
+    animation: buttonClick .3s ease;
+}
+
+@keyframes buttonClick {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.97);
+    }
+  }
+
+.btn-agregar{
+    background-color: rgb(13, 88, 226) ;
+    color: #fff;
+}
+
+.lista-de-tareas{
+
+
+}
+
+.tarea{
+
+
+
+}
