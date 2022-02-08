@@ -1,102 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html {
-    box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-
-*{
-    font-family: 'Roboto', monospace;
+  box-sizing: border-box;
 }
 
-body{
-    background: rgb(2,0,36);
-    background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-.container{
-    max-width: 768px;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+* {
+  font-family: "Roboto", monospace;
 }
 
-.app{
-    margin-top: 2rem;
-    background-color: #fff;
-    width:100%;
-    border-radius: 10px;
-    padding: 1rem;
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    25deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
-.titulo-app{
-    text-align: center;
-    margin: 0;
-
+.container {
+  max-width: 768px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
 }
 
-.fila-input{
-    display: flex;
-    align-items: center;
-    padding: 1rem 0;
+.app {
+  margin-top: 2rem;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
-.fila-input .btn{
-    margin-left: .5rem;
+.titulo-app {
+  text-align: center;
+  margin: 0;
 }
 
-.fila-input .textbox{
-    flex-grow: 1;
+.fila-input {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-.textbox{
-    display: inline;
-    height: 2rem;
-    border-radius: 5px;
-    min-width: 300px;
+.fila-input .btn {
+  margin-left: 0.5rem;
 }
 
-.btn{
-    height: 2.5rem;
-    width: 8rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
+.fila-input .textbox {
+  flex-grow: 1;
 }
 
-.btn:active{
-    animation: buttonClick .3s ease;
+
+.textbox {
+  display: inline;
+  height: 2rem;
+  border-radius: 5px;
+  min-width: 300px;
+}
+
+.btn {
+  height: 2.5rem;
+  width: 8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:active {
+  animation: buttonClick 0.3s ease;
 }
 
 @keyframes buttonClick {
-    0%,
-    100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(0.97);
-    }
+  0%,
+  100% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(0.97);
+  }
+}
 
-.btn-agregar{
-    background-color: rgb(13, 88, 226) ;
+.btn-agregar {
+  background-color: rgb(13, 88, 226);
+  color: #fff;
+}
+
+.btn-eliminar{
+    background-color: red;
     color: #fff;
 }
 
-.lista-de-tareas{
-
-
+.lista-de-tareas {
 }
 
-.tarea{
-
-
-
+.tarea {
 }
