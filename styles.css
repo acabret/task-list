@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html {
-  box-sizing: border-box;
+  box-sizing:;
 }
 
 *,
@@ -94,13 +94,51 @@ body {
   color: #fff;
 }
 
-.btn-eliminar{
+.btn-cancelar{
     background-color: red;
     color: #fff;
+}
+
+.btn-completar{
+  background-color: rgb(0, 228, 49);
+  color: #fff;
 }
 
 .lista-de-tareas {
 }
 
 .tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
 }
+
+.tarea-tachada::before{
+  content: '';
+  position: absolute;
+  /* height:1px; */
+  width: 100%;
+  border: 2px red solid;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+
+
+}
+
+/* .posicion-relativa{
+  position:relative;
+  top: 285px;
+  left:-50px;
+} */
+
+/* .posicion-absoluta{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+} */
