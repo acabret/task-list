@@ -1,10 +1,16 @@
-const tareas = obtenerTareasDelStorage();
+import { obtenerTareas, agregarTarea, cambiarEstadoCompletitud } from "./tareasService.js"
+
+// obtenerTareas(imprimirTareas)
+obtenerTareas(agregarUnaTarea)
+
+// const tareas = obtenerTareasDelStorage();
+const tareas = []
 const listaTareas = document.getElementById("lista-de-tareas")
 const botonAgregar = document.querySelector('.btn-agregar')
 const inputTexto = document.querySelector("input")
-imprimirTareas(tareas)
+// imprimirTareas(tareas)
 
-//{id:1, nombre:"asdasd", completado:false }
+
 
 botonAgregar.addEventListener("click", crearTarea)
 
@@ -15,16 +21,18 @@ function crearTarea(event){
     if(inputTexto.value.trim().length > 0){
 
         const texto = inputTexto.value.trim()
-        const nuevaTarea = { id:34, nombre: texto, completado: false }
-        tareas.push(nuevaTarea)
-        agregarUnaTarea(nuevaTarea);
+        // const nuevaTarea = { id:34, nombre: texto, completado: false }
+        const nuevaTarea = { nombre: texto }
+        agregarTarea(nuevaTarea, agregarUnaTarea)
+        // tareas.push(nuevaTarea)
+        // agregarUnaTarea(nuevaTarea);
         inputTexto.value = ""
     }
 
 }
 
 function agregarUnaTarea(tarea){
-
+    tareas.push(tarea)
     listaTareas.appendChild(crearElementoTarea(tarea))
     guardarTareasEnLocalStorage(tareas)
 
@@ -62,9 +70,10 @@ function crearElementoTarea(tarea){
   itemLista.appendChild(botonCompletitud)
 
   botonCompletitud.addEventListener("click", function(){
-  tarea.completado = !tarea.completado
-  botonCompletitud.innerText = tarea.completado ? "Cancelar" : "Completar"
-    
+    cambiarEstadoCompletitud(tarea)
+    tarea.completado = !tarea.completado
+    botonCompletitud.innerText = tarea.completado ? "Cancelar" : "Completar"
+      
     if(tarea.completado){
       spanTexto.classList.add('tarea-tachada')
 
